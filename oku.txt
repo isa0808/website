@@ -1,0 +1,2 @@
+txt adı 4 kere yazılıyor txt.phpden değiştirin
+txt dosyasını silmeyin sadece adını değiştirin

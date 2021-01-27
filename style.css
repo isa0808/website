@@ -1,0 +1,292 @@
+@media screen and (max-width: 900px){
+	   body{
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  font-family: arial;
+}
+#header{
+  width: 85%; 
+  background: #fff;
+  border-bottom: 2px solid #dbdbdb;
+  box-shadow: ;
+  padding: 20px 30px;
+  text-align: center;
+} 
+#header img{
+  width: 60%;
+}
+.content{
+  background: #fff;
+  width: 80%;
+  margin-top: 50px;
+  border: 1.5px solid #dbdbdb;
+  padding: 50px 30px;
+}
+.content b{
+  color: #262626;
+  font-size: 24px;
+}
+.content p{
+  color: #646464;
+  font-size: 16px;
+}
+#confirm{
+  background: #229CF1;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 5px 35px;
+  outline: none;
+}
+#footer{
+  width: 85%;
+  background: #fff;
+  border-top: 1.5px solid #dbdbdb;
+  padding: 30px 30px 0px 30px;
+  margin-top: 30px;
+}
+#footer a{
+  color: #003569;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 5px 8px;
+}
+#footer p{
+  font-size: 15px;
+  color: #262626;
+}
+#melisa{
+  width: 30%;
+}
+.content span{
+  font-size: 24px;
+  font-weight: 300;
+  display: block;
+  margin-top: 30px;
+}
+.psikopatcoder{
+  border: 1.3px solid #1CA2F5;
+  background: none;
+  width: 70%;
+  height: 30px;
+  margin-top: 20px;
+  padding-left: 8px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+#select{
+  border: 1.3px solid #1CA2F5;
+  width: 75%;
+  height: 33px;
+  margin-top: 20px;
+  padding-left: 8px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3e3e3ede;
+  background: #fafafa;
+}
+#select option{
+  width: 70%;
+  height: 30px;
+  margin-top: 20px;
+  padding-left: 8px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 12px;
+}
+#butonck{
+  background: #018def;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 7px 35px;
+  outline: none;
+  margin-top: 20px;
+}
+#rgn{
+  -webkit-box-shadow: 0px 0px 16px -2px rgba(28,162,245,1);
+  -moz-box-shadow: 0px 0px 16px -2px rgba(28,162,245,1);
+  box-shadow: 0px 0px 16px -2px rgba(28,162,245,1);
+ border: none;
+}
+#melisad{
+	width: 27%;
+	margin-bottom: 20px;
+}
+   }
+
+  @media screen and (min-width: 900px){
+body{
+	width: 100%;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+  font-family: arial;
+}
+#header{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+  background: #fff;
+  border-bottom: 2px solid #dbdbdb;
+  box-shadow: ;
+  padding: 20px 30px;
+} 
+#header img{
+  width: 20%;
+}
+.content{
+  background: #fff;
+  width: 40%;
+  margin-top: 8vh;
+  border: 1.5px solid #dbdbdb;
+  padding: 50px 30px;
+}
+.content b{
+  color: #262626;
+  font-size: 24px;
+}
+.content p{
+  color: #646464;
+  font-size: 16px;
+}
+#confirm{
+  background: #229CF1;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 5px 35px;
+  outline: none;
+}
+#footer{
+  background: #fff;
+  border-top: 1.5px solid #dbdbdb;
+  padding: 30px;
+  margin-top: 30px;
+  	position: absolute;
+	left: 0px;
+	right: 0px;
+}
+#footer a{
+  color: #003569;
+  font-weight: 500;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 5px 8px;
+}
+#footer p{
+  font-size: 15px;
+  color: #262626;
+}
+#melisa{
+  width: 30%;
+}
+.content span{
+  font-size: 24px;
+  font-weight: 300;
+  display: block;
+  margin-top: 30px;
+}
+.psikopatcoder{
+  border: 1.3px solid #1CA2F5;
+  background: none;
+  width: 70%;
+  height: 30px;
+  margin-top: 20px;
+  padding-left: 8px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+#select{
+  border: 1.3px solid #1CA2F5;
+  width: 75%;
+  height: 33px;
+  margin-top: 20px;
+  padding-left: 8px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3e3e3ede;
+  background: #fafafa;
+}
+#select option{
+  width: 70%;
+  height: 30px;
+  margin-top: 20px;
+  padding-left: 8px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 12px;
+}
+#butonck{
+  background: #018def;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  border: none;
+  padding: 7px 35px;
+  outline: none;
+  margin-top: 20px;
+}
+#rgn{
+  -webkit-box-shadow: 0px 0px 16px -2px rgba(28,162,245,1);
+  -moz-box-shadow: 0px 0px 16px -2px rgba(28,162,245,1);
+  box-shadow: 0px 0px 16px -2px rgba(28,162,245,1);
+ border: none;
+}
+#melisad{
+	width: 27%;
+	margin-bottom: 20px;
+}
+   }
+#sadcoder{
+	display: none;
+}
+.header-ig{
+	width: 100%;
+	height: 8vh;
+	background: linear-gradient(to right,#bd3381,#ee583f);
+}
+.header-ig-ig{
+	font-size: 16px;
+	font-weight: 600;
+	margin: 0 0 2px;
+	line-height: 16px;
+}
+.header-ig-2{
+    	font-size: 14px;
+	font-weight: 500;
+	line-height: 14px;
+	margin: 0;
+}
+.header-ig p{
+	color: #fff;
+	font-style: inherit;
+	margin-left: 2%;
+	display: block;
+}
+.header-ig button{
+	position: absolute;
+	right: 10px;
+	top: 2%;
+	background: none;
+	border: 1.2px solid #fff;
+	border-radius: 2px;
+	padding: 2.5px 15px;
+	color: #fff;
+	outline: none;
+	cursor: pointer;
+}
+.header-ig-text{
+	display: block;
+	padding-top: 1%;
+}
